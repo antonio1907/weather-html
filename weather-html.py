@@ -1,4 +1,3 @@
-
 import requests
 import json
 from jinja2 import Template
@@ -39,7 +38,7 @@ for linea in f:
 plantilla = Template(html)
 
 
-for ciudadp in ciudades:
+for ciudad in ciudades:
 	respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudadp})
 	dicc = json.loads(respuesta.text)
 
