@@ -1,1 +1,20 @@
-erg
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+	<head>
+		<title>Tiempo Andalucia</title>
+	</head>
+	<body>
+		<h1>El Tiempo de Andalucia</h1>
+		{% set contador = 0 %}
+		{% for ciudadp in ciudadp %}
+		<h2>{{ ciudadp }}</h2>
+		<ul>
+			<li>Temperatura minima prevista: {{ temp_min[contador] }} C</li>
+			<li>Temperatura maxima prevista: {{ temp_max[contador] }} C</li>	
+			<li>Viento: {{ speed[contador] }} direccion {{ direccion[contador] }}</li>
+		</ul>
+		{% set contador = contador + 1 %}
+		{% endfor %}
+	</body>
+</html>
