@@ -22,10 +22,10 @@ def orientaciondelviento(direccion):
 		return "Noroeste"
 
 ciudades=["Almeria", "Cadiz", "Cordoba", "Granada", "Huelva", "Jaen", "Malaga", "Sevilla"]
-tempe_min = []
-tempe_max = []
-viento_vel = []
-viento_direc = []
+temperatur_minima = []
+temperatura_maxima = []
+velocidad_viento = []
+direccion_viento = []
 print ''
 
 f = open('plantilla.html','r')
@@ -44,13 +44,13 @@ for ciudad in ciudades:
 
 
 	tempemin = round(dicc["main"]["temp_min"] - 273,1)
-	tempe_min.append(tempemin)
+	temperatura_minima.append(tempemin)
 	tempemax = round(dicc["main"]["temp_max"] - 273,1)
-	tempe_max.append(tempemax)
+	temperatura_maxima.append(tempemax)
 	viento = round(dicc["wind"]["speed"] * 1.61,1)
-	viento_vel.append(viento)
+	velocidad_viento.append(viento)
 	direccion = dicc["wind"]["deg"]
-	viento_direc.append(orientaciondelviento(direccion))
+	direccion_viento.append(orientaciondelviento(direccion))
 
 tiempo = plantilla.render(ciudad=ciudades,temp_max=tempe_max,temp_min=tempe_min,speed=viento_vel,direccion=viento_direc)
 fichero = open('tiempo.html','w')
