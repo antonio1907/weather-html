@@ -22,8 +22,8 @@ def orientaciondelviento(direccion):
 		return "Noroeste"
 
 ciudades=["Almeria", "Cadiz", "Cordoba", "Granada", "Huelva", "Jaen", "Malaga", "Sevilla"]
-temperatura_minima = []
-temperatura_maxima = []
+temperatura_min = []
+temperatura_max = []
 velocidad_viento = []
 direccion_viento = []
 print ''
@@ -44,9 +44,9 @@ for ciudad in ciudades:
 
 
 	tempemin = round(dicc["main"]["temp_min"] - 273,1)
-	temperatura_minima.append(tempemin)
+	temperatura_min.append(tempemin)
 	tempemax = round(dicc["main"]["temp_max"] - 273,1)
-	temperatura_maxima.append(tempemax)
+	temperatura_max.append(tempemax)
 	viento = round(dicc["wind"]["speed"] * 1.61,1)
 	velocidad_viento.append(viento)
 	direccion = dicc["wind"]["deg"]
