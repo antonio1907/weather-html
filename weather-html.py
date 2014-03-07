@@ -39,7 +39,7 @@ plantilla = Template(html)
 
 
 for ciudad in ciudades:
-	resultado = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudad})
+	respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudad})
 	dicc = json.loads(respuesta.text)
 
 
