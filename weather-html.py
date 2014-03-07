@@ -52,7 +52,7 @@ for ciudad in ciudades:
 	direccion = dicc["wind"]["deg"]
 	direccion_viento.append(orientaciondelviento(direccion))
 
-tiempo = plantilla.render(ciudad=ciudades,temp_max=temperatura_max,tempratura_min=tempe_min,speed=velocidad_viento,direccion=direccion_viento)
+tiempo = plantilla.render(ciudad=ciudades,temp_max=temperatura_max,temp_min=temperatura_min,speed=velocidad_viento,direccion=direccion_viento)
 fichero = open('tiempo.html','w')
 fichero.write(tiempo)
 fichero.close()
