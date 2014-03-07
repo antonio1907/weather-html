@@ -22,7 +22,7 @@ def orientaciondelviento(direccion):
 		return "Noroeste"
 
 ciudades=["Almeria", "Cadiz", "Cordoba", "Granada", "Huelva", "Jaen", "Malaga", "Sevilla"]
-temperatur_minima = []
+temperatura_minima = []
 temperatura_maxima = []
 velocidad_viento = []
 direccion_viento = []
