@@ -47,7 +47,7 @@ for ciudad in ciudades:
 	temperatura_min.append(tempemin)
 	tempemax = (dicc["main"]["temp_max"] - 273)
 	temperatura_max.append(tempemax)
-	viento = (dicc["wind"]["speed"] * 1.61)
+	viento = (dicc["wind"]["speed"] * 1.60)
 	velocidad_viento.append(viento)
 	direccion = dicc["wind"]["deg"]
 	direccion_viento.append(orientaciondelviento(direccion))
