@@ -21,12 +21,12 @@ def orientaciondelviento(direccion):
 	if direccion >= 292.5 and direccion < 337.5:
 		return "Noroeste"
 
-ciudades=["Almeria", "Cadiz", "Cordoba", "Granada", "Huelva", "Jaen", "Malaga", "Sevilla"]
+ciudades=["Almeria", "Cadiz", "Cordoba", "Huelva", "Jaen", "Malaga", "Sevilla"]
 temperatura_min = []
 temperatura_max = []
 velocidad_viento = []
 direccion_viento = []
-print ''
+
 
 f = open('plantilla.html','r')
 
@@ -43,11 +43,11 @@ for ciudad in ciudades:
 	dicc = json.loads(respuesta.text)
 
 
-	tempemin = round(dicc["main"]["temp_min"] - 273,1)
+	tempemin = (dicc["main"]["temp_min"] - 273)
 	temperatura_min.append(tempemin)
-	tempemax = round(dicc["main"]["temp_max"] - 273,1)
+	tempemax = (dicc["main"]["temp_max"] - 273)
 	temperatura_max.append(tempemax)
-	viento = round(dicc["wind"]["speed"] * 1.61,1)
+	viento = (dicc["wind"]["speed"] * 1.61)
 	velocidad_viento.append(viento)
 	direccion = dicc["wind"]["deg"]
 	direccion_viento.append(orientaciondelviento(direccion))
