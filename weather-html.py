@@ -43,11 +43,11 @@ for ciudad in ciudades:
 	dicc = json.loads(respuesta.text)
 
 
-	tempemin = (dicc["main"]["temp_min"] - 273)
+	tempemin = round(dicc["main"]["temp_min"] - 273)
 	temperatura_min.append(tempemin)
-	tempemax = (dicc["main"]["temp_max"] - 273)
+	tempemax = round(dicc["main"]["temp_max"] - 273)
 	temperatura_max.append(tempemax)
-	viento = (dicc["wind"]["speed"] * 1.61)
+	viento = round(dicc["wind"]["speed"] * 1.61)
 	velocidad_viento.append(viento)
 	direccion = dicc["wind"]["deg"]
 	direccion_viento.append(orientaciondelviento(direccion))
